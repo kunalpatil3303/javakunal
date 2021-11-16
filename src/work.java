@@ -1,33 +1,31 @@
-class test
+class person
 {
-    int a;
-    int b;
-    int add;
-
-    test(int a, int b)
+    public void message()
     {
-        this.a = a;
-        this.b = b;
+        System.out.println("this is a person class");
+    }
+}
+class students extends person
+{
+    public void message()
+    {
+        System.out.println("this is a student class");
     }
 
     public void display()
     {
-        System.out.println("a = " +a);
-        System.out.println("b = " +b);
+        message();
+        super.message();
     }
-     public void result()
-     {
-         add = int a + int b;
-         System.out.println(add);
-     }
 }
 
 
 
 public class work {
     public static void main(String[] args) {
-        test obj = new test(10,20);
+        students obj = new students();
         obj.display();
-        obj.result();
+
+
     }
 }
